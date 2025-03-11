@@ -7,11 +7,14 @@ import Link from "next/link";
 import { Avatar, AvatarImage } from "./ui/avatar";
 import { Separator } from "./ui/separator";
 import { LinkIcon, MapPinIcon } from "lucide-react";
+
 async function Sidebar() {
   const authUser = await currentUser();
-  if (!authUser) return <UnAuthenticatedSidebar />
-  const user=await getUserByClerkId(authUser.id);
-  if(!user)return null;
+  if (!authUser) return <UnAuthenticatedSidebar />;
+
+  const user = await getUserByClerkId(authUser.id);
+  if (!user) return null;
+
   return (
     <div className="sticky top-20">
       <Card>
@@ -70,7 +73,9 @@ async function Sidebar() {
       </Card>
     </div>
   );
-}export default Sidebar;
+}
+
+export default Sidebar;
 
 const UnAuthenticatedSidebar = () => (
   <div className="sticky top-20">
