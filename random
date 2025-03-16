@@ -6,5 +6,6 @@ What i have learn so far
 5.File System based routing
 6.server actions
 7.Route handlers
-
+8.Dynamic routes
+9.Generate Metadata
 Read this-> https://nextjs.org/docs/app/building-your-application/rendering/composition-patterns
